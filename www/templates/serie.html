@@ -1,0 +1,9 @@
+<ion-view view-title="Articles Serie">
+    <ion-content>
+        <h3 class="padding">Articles in the Serie: {{datos.id}}</h3>
+        <p>{{datos.descrip.es_EN}}</p>
+            <a class="fotos" ng-repeat="arti in datos.arti" href="#/app/artilista/{{arti.imgId}}">
+                <img ng-src="img/arti/{{datos.id}}/{{arti.imgId}}.jpg">
+            </a>
+    </ion-content>
+</ion-view>

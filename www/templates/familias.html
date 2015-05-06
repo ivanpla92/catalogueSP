@@ -1,0 +1,12 @@
+<ion-view view-title="Families">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item item-avatar" ng-repeat="familia in listaFamilias" href="#/app/familias/{{$index}}">
+                <img ng-src="img/family/{{familia.id}}.png">
+                <h2>{{familia.nombre.en_EN}}</h2>
+                <p>{{familia.nombre.es_ES}}</p>
+                <span class="badge badge-positive">{{familia.series.length}}</span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

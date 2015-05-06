@@ -1,0 +1,56 @@
+<ion-view view-title="Search">
+    <ion-content>
+
+        <!--Formulario Busqueda-->
+        <form ng-submit="buscar()">
+            <h3 class="padding">Search</h3>
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="text" ng-model="dat.word" placeholder="Item Code">
+                    <button class="button-clear ion-close-circled dark" type="reset"></button>
+                    <button class="button-small button-clear ion-search positive" type="submit" style="padding: 2px;">
+                    </button>
+                </label>
+            </div>
+        </form>
+
+        <!--Formulario Articulo SI EXISTE-->
+        <div class="list card" ng-show="dat.exist">
+            <div class="balanced-bg col"></div>
+            <a class="item item-body" href="#/app/articulo/{{dat.arti.id}}">
+                <img ng-src="img/arti/{{dat.arti.idSerie}}/{{dat.arti.idFoto}}.jpg" style="max-width: 350px; width: 90%; margin-left: 5%">
+                <ion-item class="item">
+                    <div class="col positive-bg" style="color:white;">{{dat.arti.id}}</div>
+                    <div class="col">{{dat.arti.nombre}}</div>
+                    <div class="row">
+                        <h6 class="col positive">Cap. (ml)</h6>
+                        <h6 class="col positive">Max.Dia. (mm)</h6>
+                        <h6 class="col positive">W. (grs)</h6>
+                        <h6 class="col positive">H. (mm)</h6>
+                    </div>    
+                    <div class="row">
+                        <div class="col">{{dat.arti.capacidad}}</div>
+                        <div class="col">{{dat.arti.diametro}}</div>
+                        <div class="col">{{dat.arti.peso}}</div>
+                        <div class="col">{{dat.arti.altura}}</div>
+                    </div>
+                </ion-item>
+
+                </ion-list>
+            </a>
+            <div class="item">
+                <ion-item class="item item-thumbnail-left" href="#/app/serie/{{dat.arti.idSerie}}" >
+                    <img ng-src="img/series/{{dat.arti.idSerie}}.png">
+                    <p>Serie: {{dat.arti.idSerie}}</p>
+                    <div class="col">
+                    </div>
+                </ion-item>
+            </div>
+        </div>
+        <!--Formulario No encontrado SI NO EXISTE ARTICULO-->
+        <div class="list card energized-bg stable light-bg" ng-show="dat.nfound">
+            <span class="padding">Not found this code {{dat.word}}...!!!</span>
+        </div>
+    </ion-content>
+</ion-view>

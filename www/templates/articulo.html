@@ -1,0 +1,31 @@
+<ion-view view-title="Article">
+    <ion-content>
+        <h3 class="padding">Article {{datos.idSerie}} serie</h3>
+        <a href="img/arti/{{datos.idSerie}}/{{datos.idFoto}}.jpg"><img ng-src="img/arti/{{datos.idSerie}}/{{datos.idFoto}}.jpg" style="max-width: 300px; width: 90%; margin-left: 5%"></a>
+        <ion-list>
+            <ion-item class="item item-thumbnail-left" >
+
+                <img ng-src="img/series/{{datos.idSerie}}.png">
+                <p>Code: {{datos.id}}</p>
+                <div class="col">
+                    <div class="row">
+                        <span class="col positive">Cap. (ml):</span>
+                        <div class="col">{{datos.capacidad}}</div>
+                    </div>
+                    <div class="row">
+                        <h3 class="col positive ">Max.dia.(mm):</h3>
+                        <div class="col">{{datos.diametro}}</div>
+                    </div>
+                    <div class="row">
+                        <h3 class="col positive">W. (grs)</h3>
+                        <div class="col">{{datos.peso}}</div>
+                    </div>
+                    <div class="row">
+                        <h3 class="col positive">H. (mm)</h3>
+                        <div class="col">{{datos.altura}}</div>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

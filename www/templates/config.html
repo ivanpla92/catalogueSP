@@ -1,0 +1,27 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Settings</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeConfig()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="saveConfig()">
+            <div class="list">
+                <div class="item item-divider">
+                    Languages:
+                </div>
+                <label class="item item-radio" ng-repeat="idioma in idiomas">
+                    <input type="radio" ng-model="configData.idioma" name="grupo" value="{{idioma.id}}">
+                    <div class="item-content">
+                        {{idioma.descrip}}
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Save</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

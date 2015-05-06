@@ -1,0 +1,14 @@
+<ion-view view-title="Family Series">
+    <ion-content>
+        <h3 class="padding">Series {{familia.nombre.es_ES}}</h3>
+        <ion-list>
+            <ion-item class="item item-thumbnail-left" ng-repeat="serie in familia.series" href="#/app/serie/{{serie.idSerie}}">
+                <img ng-src="img/series/{{serie.idSerie}}.png">
+                <h2>{{serie.idSerie}}</h2>
+                <p>{{serie.nombre.en_EN}}</p>
+                <p>{{serie.nombre.es_ES}}</p>
+                <p>Total Items: {{serie.num}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

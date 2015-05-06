@@ -1,0 +1,15 @@
+{
+    "attributes": {},
+    "elements": {
+        "ion-side-menus": {},
+        "ion-modal-view": {},
+        "ion-header-bar": {},
+        "div": {},
+        "ion-item": {},
+        "ion-view": {},
+        "ion-side-menu": {},
+        "ion-nav-view": {},
+        "ion-list": {},
+        "ion-content": {}
+    }
+}

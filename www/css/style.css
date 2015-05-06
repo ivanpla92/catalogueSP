@@ -1,0 +1,7 @@
+/* Empty. Add your own CSS if you like */
+.fotos img{
+    margin-left: 2px !important;
+    padding-left: 2px !important;
+    width: 98%;
+    max-width: 350px;
+}
